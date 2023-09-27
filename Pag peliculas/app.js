@@ -5,8 +5,19 @@ const btnSiguiente = document.getElementById('btnSiguiente')
 obtenerPeliculas();
 
 btnSiguiente.addEventListener('click', () => {
+
+    if (pagina < 1000){ 
     pagina += 1;
     obtenerPeliculas();
+    }
+});
+
+btnAnterior.addEventListener('click', () => {
+
+    if (pagina > 1){ 
+    pagina -= 1;
+    obtenerPeliculas();
+    }
 });
 
 function obtenerPeliculas() {
